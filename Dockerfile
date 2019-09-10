@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . /app
 RUN composer install
 
-FROM php:7.1.23-apache
+FROM php:7.3.9-apache
 RUN docker-php-ext-install pdo_mysql
 EXPOSE 80
 COPY --from=build /app /app
