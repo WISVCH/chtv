@@ -2,14 +2,14 @@ language: minimal
 services:
   - docker
 script:
-  - docker build --no-cache --pull -t wisvch/nginx -t quay.io/wisvch/nginx .
+  - docker build --no-cache --pull -t wisvch/chtv -t quay.io/wisvch/chtv .
 deploy:
   - provider: script
     script: >-
       sh -c '
       docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-      echo pushing to wisvch/nginx;
-      docker push wisvch/nginx;
+      echo pushing to wisvch/chtv;
+      docker push wisvch/chtv;
       '
     on:
       branch: master
@@ -17,8 +17,8 @@ deploy:
     script: >-
       sh -c '
       docker login -u "$QUAY_USERNAME" -p "$QUAY_PASSWORD" quay.io;
-      echo pushing to quay.io/wisvch/nginx;
-      docker push quay.io/wisvch/nginx;
+      echo pushing to quay.io/wisvch/chtv;
+      docker push quay.io/wisvch/chtv;
       '
     on:
       branch: master
