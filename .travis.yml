@@ -2,7 +2,7 @@ language: minimal
 services:
   - docker
 script:
-  - docker build --no-cache --pull -t wisvch/chtv -t quay.io/wisvch/chtv .
+  - docker build --no-cache --pull -t wisvch/chtv -t quay.io/wisvch/chtv:$TRAVIS_BUILD_NUMBER .
 deploy:
   - provider: script
     script: >-
