@@ -1,0 +1,246 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+#loading {
+    width: 250px;
+    padding-top: 200px;
+    margin: auto;
+}
+
+#loading h1 {
+    text-align: center;
+    font-size: 70px;
+}
+
+#loading h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+#slides {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#slides .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    z-index: 50;
+}
+
+#progress-bar .progress {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+/** Poster **/
+.slide .poster {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+/** Poster **/
+.slide video {
+    width: 100%;
+    height: 100%;
+}
+
+/** Countdown **/
+.countdown-main {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+.countdown-main .countdown-block {
+    height: 100%;
+    text-align: center;
+}
+
+.countdown-main .overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.countdown-main .header {
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    font-size: 90px;
+    text-transform: uppercase;
+    color: white;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+}
+
+.countdown-main .description {
+    position: absolute;
+    bottom: 50px;
+    height: auto;
+    max-width: 40%;
+    font-size: 50px;
+    color: white;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.countdown-main .description-left {
+    left: 50px;
+}
+
+.countdown-main .description-right {
+    right: 50px;
+}
+
+.countdown-main .countdown-done {
+    position: absolute;
+    top: 600px;
+    height: auto;
+    width: 60%;
+    left: 20%;
+    font-size: 50px;
+    color: white;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/** Countdown1 **/
+.countdown1.countdown-container {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.countdown1 .clock-item .inner {
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.countdown1 .clock-canvas {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.countdown1 .text {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -50px;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    width: 100%;
+}
+
+.countdown1 .text .val {
+    font-size: 50px;
+}
+
+.countdown1 .text .type-time {
+    font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .countdown1 .clock-item {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .countdown1 .clock-item {
+        margin: 0 30px 30px 30px;
+    }
+}
+
+
+
+/** Countdown2 **/
+
+.flipclock-wrapper {
+    position: relative;
+    top: 400px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: auto;
+    display: inline-block;
+    background-color: black;
+}
+
+.flipclock-divider .flipclock-label {
+    font-size: 25px;
+    right: -172px;
+}
+
+.flipclock-wrapper ul {
+    width: 120px;
+    height: 180px;
+    font-size: 160px;
+    font-weight: bold;
+    line-height: 176px;
+}
+
+.flipclock-wrapper ul li {
+    line-height: 176px;
+}
+
+.flipclock-wrapper ul li a div div.inn {
+    font-size: 140px;
+}
+
+.flipclock-divider {
+    width: 30px;
+    height: 190px;
+}
+
+.flipclock-dot {
+    width: 20px;
+    height: 20px;
+}
+
+.flipclock-wrapper ul li a div.up:after {
+    top: 88px;
+}
+
+iframe {
+    border: 0;
+}
