@@ -1,0 +1,29 @@
+name: Docker
+on:
+  # Enable manual trigger
+  workflow_dispatch:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
+jobs:
+  buildDockerImage:
+    name: Build Docker image
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Push to Quay
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.QUAY_USERNAME }}
+        password: ${{ secrets.QUAY_PASSWORD }}
+        registry: quay.io
+        repository: wisvch/chtv
+        tag_with_ref: true
+        tag_with_sha: true
+        add_git_labels: true
+        push: ${{ github.ref == 'refs/heads/master' }}
